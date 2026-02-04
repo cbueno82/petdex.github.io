@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PETDEX — Animales & AWS</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+
+<header class="pokedex-header">
+  <div class="led blue"></div>
+  <div class="led red"></div>
+  <div class="led yellow"></div>
+  <h1>PETDEX</h1>
+  <p>Servicios de AWS explicados por animales domésticos</p>
+</header>
+
+<main class="pokedex-grid">
+
+  <!-- #001 EC2 -->
+  <article class="pokemon-card"
+    data-largo="Calma parece completamente tranquila. Está tumbada, relajada, como si nada pudiera alterarla. Pero esa calma es engañosa: basta que alguien la llame para que se levante y empiece a correr sin mirar atrás. Amazon EC2 funciona exactamente así. Puedes tenerlo aparentemente inactivo, pero cuando llega la carga responde con potencia real, escalando instancias, cambiando tamaños y consumiendo recursos sin ningún remordimiento."
+    data-movimiento="Auto Scaling inesperado">
+
+    <div class="pokemon-id">#001</div>
+    <img src="images/Calma_no_calmada.jpeg" alt="Calma">
+    <h2>Calma</h2>
+    <div class="types">
+      <span class="type compute">Compute</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon EC2</p>
+    </div>
+  </article>
+
+  <!-- #002 LAMBDA -->
+  <article class="pokemon-card"
+    data-largo="Coco duerme profundamente. Todo está en silencio y parece que no va a pasar nada, hasta que algo se rompe. Entonces aparece de golpe, ejecuta su función con precisión quirúrgica y desaparece como si nunca hubiera estado allí. No deja rastro, no mantiene estado y no pide infraestructura. AWS Lambda es así: eficiente, puntual y peligrosamente fácil de activar si no se miden bien los eventos."
+    data-movimiento="Trigger por evento mal planteado">
+
+    <div class="pokemon-id">#002</div>
+    <img src="images/Coco_destruccion.jpg" alt="Coco">
+    <h2>Coco</h2>
+    <div class="types">
+      <span class="type serverless">Serverless</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> AWS Lambda</p>
+    </div>
+  </article>
+
+  <!-- #003 EVENTBRIDGE -->
+  <article class="pokemon-card"
+    data-largo="Cosima no corre ni se precipita. Se queda quieta observando. Escucha todo lo que ocurre a su alrededor y decide cuándo otros deben actuar. No ejecuta directamente el caos, pero lo coordina con una tranquilidad inquietante. Amazon EventBridge conecta servicios que no deberían hablarse y desencadena reacciones en cadena con solo un evento mal colocado."
+    data-movimiento="Evento en bucle infinito">
+
+    <div class="pokemon-id">#003</div>
+    <img src="images/Cosima_destruccion.jpg" alt="Cosima">
+    <h2>Cosima</h2>
+    <div class="types">
+      <span class="type network">Event-driven</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon EventBridge</p>
+    </div>
+  </article>
+
+  <!-- #004 CLOUDFRONT -->
+  <article class="pokemon-card"
+    data-largo="Dio siempre está delante. Recibe a todos antes que nadie y filtra el caos con paciencia. Hace que todo parezca rápido y sencillo, incluso cuando por detrás hay sistemas frágiles y complejos. Amazon CloudFront acerca el contenido al usuario, reduce latencia y protege al backend de visitas innecesarias. Parece simpático, pero es inflexible con el rendimiento."
+    data-movimiento="Cache Hit demoledor">
+
+    <div class="pokemon-id">#004</div>
+    <img src="images/Dio.JPG" alt="Dio" class="contain">
+    <h2>Dio</h2>
+    <div class="types">
+      <span class="type network">CDN</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon CloudFront</p>
+    </div>
+  </article>
+
+  <!-- #005 LIGHTSAIL -->
+  <article class="pokemon-card"
+    data-largo="Guppy es pequeño, manejable y no intimida a nadie. Hace justo lo que se le pide, sin sorpresas ni configuraciones interminables. Amazon Lightsail está pensado para empezar: lanzar servidores sencillos, probar ideas y aprender sin miedo. Eso sí, cuando Guppy crece y pide más espacio, suele tocar migrar."
+    data-movimiento="Setup en cinco minutos">
+
+    <div class="pokemon-id">#005</div>
+    <img src="images/guppy_cachorro.jpeg" alt="Guppy">
+    <h2>Guppy</h2>
+    <div class="types">
+      <span class="type compute">Compute</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon Lightsail</p>
+    </div>
+  </article>
+
+  <!-- #006 RDS -->
+  <article class="pokemon-card"
+    data-largo="Uno duerme mientras el otro vigila. Puede parecer que no pasa nada, pero si uno falla el otro se levanta y toma el control sin hacer ruido. Amazon RDS en modo Multi-AZ es justo eso: alta disponibilidad sin dramas visibles. No es emocionante, pero cuando algo sale mal, se agradece muchísimo."
+    data-movimiento="Promoción automática del standby">
+
+    <div class="pokemon-id">#006</div>
+    <img src="images/marido_minchi.jpg" alt="Marido y Minchi">
+    <h2>Marido &amp; Minchi</h2>
+    <div class="types">
+      <span class="type database">Database</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon RDS (Multi-AZ)</p>
+    </div>
+  </article>
+
+  <!-- #007 S3 + BACKUP -->
+  <article class="pokemon-card"
+    data-largo="Maya duerme panza arriba porque confía plenamente en que nada va a fallar. Guarda recuerdos, datos críticos y cosas que nadie revisa jamás. Nina, mucho más discreta, se asegura de que todo pueda recuperarse si algo sale mal. Amazon S3 y AWS Backup representan esa confianza absoluta en que los datos seguirán ahí pase lo que pase."
+    data-movimiento="Once nueves + Restore salvador">
+
+    <div class="pokemon-id">#007</div>
+    <img src="images/maya_panzaariba_ronca_y_nina_damisela.jpg" alt="Maya y Nina">
+    <h2>Maya &amp; Nina</h2>
+    <div class="types">
+      <span class="type storage">Storage</span>
+      <span class="type security">Protection</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon S3 + AWS Backup</p>
+    </div>
+  </article>
+
+  <!-- #008 ECS + FARGATE -->
+  <article class="pokemon-card"
+    data-largo="Monkey organiza y decide. Cleo ejecuta sin preguntar. Juntos hacen que todo funcione sin que nadie vea servidores, máquinas o configuraciones complejas. Amazon ECS con Fargate permite ejecutar contenedores cuando toca, escalar sin fricción y olvidarse de la infraestructura real. Parece fácil porque alguien se ha ocupado de que lo sea."
+    data-movimiento="Task lanzada sin servidores">
+
+    <div class="pokemon-id">#008</div>
+    <img src="images/Monkey_Cleo.jpeg" alt="Monkey y Cleo" class="contain">
+    <h2>Monkey &amp; Cleo</h2>
+    <div class="types">
+      <span class="type compute">Containers</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Amazon ECS + Fargate</p>
+    </div>
+  </article>
+
+  <!-- #009 ELB -->
+  <article class="pokemon-card"
+    data-largo="Vera y Tipi siempre están en medio, repartiendo responsabilidades. Observan quién puede seguir trabajando y quién necesita un descanso antes de colapsar. Elastic Load Balancing distribuye el tráfico para que nada se sature y todo fluya con cierta armonía. No se llevan el mérito, pero sin ellas el sistema se cae."
+    data-movimiento="Health check implacable">
+
+    <div class="pokemon-id">#009</div>
+    <img src="images/Vera_y_Tipi.JPG" alt="Vera y Tipi">
+    <h2>Vera &amp; Tipi</h2>
+    <div class="types">
+      <span class="type network">Networking</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> Elastic Load Balancing</p>
+    </div>
+  </article>
+
+  <!-- #010 IAM -->
+  <article class="pokemon-card"
+    data-largo="Yeli cree que puede hacerlo todo. Intenta entrar donde no debe y tocar lo que no es suyo. AWS IAM es quien decide hasta dónde llega su descaro. Define permisos, controla accesos y pone orden en el caos de identidades. Nadie disfruta configurándolo, pero todos lo necesitan cuando las cosas se ponen serias."
+    data-movimiento="AccessDeniedException">
+
+    <div class="pokemon-id">#010</div>
+    <img src="images/Yeli_sinverguenza.jpg" alt="Yeli">
+    <h2>Yeli</h2>
+    <div class="types">
+      <span class="type security">Security</span>
+    </div>
+    <div class="stats">
+      <p><strong>Servicio:</strong> AWS IAM</p>
+    </div>
+  </article>
+
+</main>
+
+<!-- ========================= -->
+<!-- FICHA INDIVIDUAL          -->
+<!-- ========================= -->
+
+<section id="detalle" class="detalle oculto">
+
+  <button class="volver" onclick="cerrarDetalle()">← Volver</button>
+
+  <div class="detalle-card">
+    <button class="nav-arrow nav-prev" onclick="anterior()">←</button>
+    <button class="nav-arrow nav-next" onclick="siguiente()">→</button>
+
+    <img id="detalle-img" src="" alt="">
+    <h2 id="detalle-nombre"></h2>
+    <div id="detalle-tipos" class="types"></div>
+    <p id="detalle-servicio"></p>
+    <p id="detalle-texto"></p>
+    <p id="detalle-movimiento"></p>
+  </div>
+</section>
+
+<footer>
+  <p>PETDEX · Autoras: Sara Gavilán, Elena Jiménez &amp; Clara Bueno</p>
+</footer>
+
+<script>
+  const cards = Array.from(document.querySelectorAll(".pokemon-card"));
+  let indiceActual = 0;
+  const detalle = document.getElementById("detalle");
+
+  function abrir(i) {
+    const card = cards[i];
+    indiceActual = i;
+
+    document.getElementById("detalle-img").src = card.querySelector("img").src;
+    document.getElementById("detalle-nombre").textContent = card.querySelector("h2").textContent;
+    document.getElementById("detalle-servicio").innerHTML = card.querySelector(".stats").innerHTML;
+    document.getElementById("detalle-texto").textContent = card.dataset.largo;
+    document.getElementById("detalle-movimiento").innerHTML =
+      "<strong>Movimiento especial:</strong> " + card.dataset.movimiento;
+
+    const tipos = card.querySelector(".types").cloneNode(true);
+    const cont = document.getElementById("detalle-tipos");
+    cont.innerHTML = "";
+    cont.appendChild(tipos);
+
+    detalle.classList.remove("oculto");
+  }
+
+  function cerrarDetalle() {
+    detalle.classList.add("oculto");
+  }
+
+  function siguiente() {
+    abrir((indiceActual + 1) % cards.length);
+  }
+
+  function anterior() {
+    abrir((indiceActual - 1 + cards.length) % cards.length);
+  }
+
+  cards.forEach((card, i) => {
+    card.addEventListener("click", () => abrir(i));
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (detalle.classList.contains("oculto")) return;
+    if (e.key === "Escape") cerrarDetalle();
+    if (e.key === "ArrowRight") siguiente();
+    if (e.key === "ArrowLeft") anterior();
+  });
+</script>
+
+</body>
+</html>
