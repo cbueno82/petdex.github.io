@@ -151,7 +151,7 @@
   }
   
   /* =================================================
-     FICHA INDIVIDUAL
+     FICHA INDIVIDUAL (MODAL)
      ================================================= */
   
   .detalle {
@@ -201,7 +201,24 @@
   }
   
   /* =================================================
-     NAVEGACIÓN VISUAL
+     BOTÓN VOLVER (SIEMPRE VISIBLE)
+     ================================================= */
+  
+  .volver {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1100;
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* =================================================
+     NAVEGACIÓN (DESKTOP)
      ================================================= */
   
   .nav-arrow {
@@ -224,19 +241,6 @@
   
   .nav-arrow:hover {
     opacity: 1;
-  }
-  
-  .volver {
-    position: fixed;         
-    top: 1rem;
-    left: 1rem;
-    z-index: 1100;           
-    background: #111;
-    color: #fff;
-    border: none;
-    padding: 0.6rem 1rem;
-    border-radius: 6px;
-    cursor: pointer;
   }
   
   /* =================================================
@@ -266,15 +270,14 @@
      ================================================= */
   
   @media (max-width: 768px) {
+  
     .nav-arrow {
       display: none;
     }
-  }
   
-  @media (max-width: 768px) {
     .detalle {
       align-items: flex-start;
-      padding-top: 4rem; 
+      padding-top: 4rem;
     }
   
     .detalle-card {
@@ -282,3 +285,22 @@
       overflow-y: auto;
     }
   }
+  
+  /* =================================================
+     DESACTIVAR FONDO CUANDO HAY FICHA ABIERTA
+     ================================================= */
+  
+  .detalle:not(.oculto) ~ .pokedex-grid,
+  .detalle:not(.oculto) ~ footer {
+    pointer-events: none;
+  }
+  
+  .detalle:not(.oculto) ~ .pokedex-grid * {
+    cursor: default;
+  }
+  
+  /* Bloqueo de scroll del fondo (progresivo) */
+  body:has(.detalle:not(.oculto)) {
+    overflow: hidden;
+  }
+  
