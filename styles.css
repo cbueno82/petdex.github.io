@@ -133,7 +133,6 @@
     color: #fff;
   }
   
-  /* Colores */
   .type.compute    { background: #388e3c; }
   .type.serverless { background: #7b1fa2; }
   .type.network    { background: #455a64; }
@@ -141,14 +140,14 @@
   .type.storage    { background: #1565c0; }
   .type.security   { background: #8e0038; }
   
-  /* SOLO info mínima en grid */
-  .stats p:not(:first-child) {
-    display: none;
-  }
-  
+  /* Vista general: solo servicio */
   .stats {
     font-size: 0.85rem;
     text-align: center;
+  }
+  
+  .stats p:not(:first-child) {
+    display: none;
   }
   
   /* =================================================
@@ -195,7 +194,6 @@
     margin-bottom: 0.6rem;
   }
   
-  /* Texto largo solo aquí */
   .detalle-card p {
     font-size: 0.9rem;
     line-height: 1.5;
@@ -203,7 +201,7 @@
   }
   
   /* =================================================
-     NAVEGACIÓN VISUAL (FLECHAS)
+     NAVEGACIÓN VISUAL
      ================================================= */
   
   .nav-arrow {
@@ -221,14 +219,13 @@
     opacity: 0.85;
   }
   
+  .nav-prev { left: -60px; }
+  .nav-next { right: -60px; }
+  
   .nav-arrow:hover {
     opacity: 1;
   }
   
-  .nav-prev { left: -60px; }
-  .nav-next { right: -60px; }
-  
-  /* Botón cerrar */
   .volver {
     position: absolute;
     top: 1.2rem;
@@ -242,85 +239,34 @@
   }
   
   /* =================================================
-     PIE
+     BORDES SEGÚN TIPO (PROGRESIVO)
      ================================================= */
   
-  footer {
-    background: #111;
-    color: #ccc;
-    text-align: center;
-    padding: 0.8rem;
-    font-size: 0.75rem;
-  }
+  .pokemon-card:has(.type.compute),
+  .detalle-card:has(.type.compute) { border-color: #388e3c; }
+  
+  .pokemon-card:has(.type.serverless),
+  .detalle-card:has(.type.serverless) { border-color: #7b1fa2; }
+  
+  .pokemon-card:has(.type.network),
+  .detalle-card:has(.type.network) { border-color: #455a64; }
+  
+  .pokemon-card:has(.type.database),
+  .detalle-card:has(.type.database) { border-color: #f57c00; }
+  
+  .pokemon-card:has(.type.storage),
+  .detalle-card:has(.type.storage) { border-color: #1565c0; }
+  
+  .pokemon-card:has(.type.security),
+  .detalle-card:has(.type.security) { border-color: #8e0038; }
   
   /* =================================================
-   BORDE / MARCO SEGÚN TIPO (ESTÉTICA POKÉDEX)
-   ================================================= */
-
-/* --- VISTA GENERAL (GRID) --- */
-
-/* Compute */
-.pokemon-card:has(.type.compute) {
-    border-color: #388e3c;
-  }
-  
-  /* Serverless */
-  .pokemon-card:has(.type.serverless) {
-    border-color: #7b1fa2;
-  }
-  
-  /* Networking / Event / CDN */
-  .pokemon-card:has(.type.network) {
-    border-color: #455a64;
-  }
-  
-  /* Database */
-  .pokemon-card:has(.type.database) {
-    border-color: #f57c00;
-  }
-  
-  /* Storage */
-  .pokemon-card:has(.type.storage) {
-    border-color: #1565c0;
-  }
-  
-  /* Security / Protection */
-  .pokemon-card:has(.type.security) {
-    border-color: #8e0038;
-  }
-  
-  /* Refuerzo visual al hover */
-  .pokemon-card:hover {
-    box-shadow:
-      8px 10px 0 #000,
-      0 0 0 3px rgba(0,0,0,0.15);
-  }
-  
-  /* =================================================
-     FICHA INDIVIDUAL (DETALLE)
+     MÓVIL
      ================================================= */
   
-     .detalle-card:has(.type.compute) {
-      border-color: #388e3c;
+  @media (max-width: 768px) {
+    .nav-arrow {
+      display: none;
     }
-    
-    .detalle-card:has(.type.serverless) {
-      border-color: #7b1fa2;
-    }
-    
-    .detalle-card:has(.type.network) {
-      border-color: #455a64;
-    }
-    
-    .detalle-card:has(.type.database) {
-      border-color: #f57c00;
-    }
-    
-    .detalle-card:has(.type.storage) {
-      border-color: #1565c0;
-    }
-    
-    .detalle-card:has(.type.security) {
-      border-color: #8e0038;
-    }
-    
+  }
+  
