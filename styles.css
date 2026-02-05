@@ -304,3 +304,7 @@
     overflow: hidden;
   }
   
+  footer {
+    text-align: center;
+    width: 100%;
+  }
