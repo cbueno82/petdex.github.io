@@ -227,9 +227,10 @@
   }
   
   .volver {
-    position: absolute;
-    top: 1.2rem;
-    left: 1.2rem;
+    position: fixed;         
+    top: 1rem;
+    left: 1rem;
+    z-index: 1100;           
     background: #111;
     color: #fff;
     border: none;
@@ -270,3 +271,14 @@
     }
   }
   
+  @media (max-width: 768px) {
+    .detalle {
+      align-items: flex-start;
+      padding-top: 4rem; 
+    }
+  
+    .detalle-card {
+      max-height: calc(100vh - 5rem);
+      overflow-y: auto;
+    }
+  }
